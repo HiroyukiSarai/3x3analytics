@@ -1,0 +1,14 @@
+# TrackID3x3 Dataset for YOLO11 Fine-tuning
+# 3x3 Basketball Player Detection
+
+path: /Users/saraihiroyuki/3x3analytics/data/yolo_dataset
+train: images/train
+val: images/val
+
+# Classes
+nc: 1
+names: ['player']
+
+# Training settings (recommended for 3x3 basketball)
+# - High augmentation for different court conditions
+# - Consider mosaic and mixup for player occlusion handling

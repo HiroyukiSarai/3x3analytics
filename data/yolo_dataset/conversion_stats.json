@@ -1,0 +1,280 @@
+{
+  "subsets": [
+    "Indoor",
+    "Outdoor"
+  ],
+  "files": [
+    {
+      "video_name": "basket_S3T6_pre",
+      "total_frames": 196,
+      "total_annotations": 1176
+    },
+    {
+      "video_name": "basket_S4T2_post",
+      "total_frames": 240,
+      "total_annotations": 1440
+    },
+    {
+      "video_name": "basket_S4T3_post",
+      "total_frames": 34,
+      "total_annotations": 204
+    },
+    {
+      "video_name": "basket_S1T1_pre",
+      "total_frames": 168,
+      "total_annotations": 1008
+    },
+    {
+      "video_name": "basket_S2T5_pre",
+      "total_frames": 184,
+      "total_annotations": 1104
+    },
+    {
+      "video_name": "basket_S5T1_post",
+      "total_frames": 188,
+      "total_annotations": 1128
+    },
+    {
+      "video_name": "basket_S6T4_post",
+      "total_frames": 300,
+      "total_annotations": 1800
+    },
+    {
+      "video_name": "basket_S6T5_post",
+      "total_frames": 176,
+      "total_annotations": 1056
+    },
+    {
+      "video_name": "basket_S2T4_pre",
+      "total_frames": 214,
+      "total_annotations": 1284
+    },
+    {
+      "video_name": "basket_S3T7_pre",
+      "total_frames": 162,
+      "total_annotations": 972
+    },
+    {
+      "video_name": "basket_S6T3_post",
+      "total_frames": 102,
+      "total_annotations": 612
+    },
+    {
+      "video_name": "basket_S6T2_post",
+      "total_frames": 300,
+      "total_annotations": 1800
+    },
+    {
+      "video_name": "basket_S2T6_pre",
+      "total_frames": 268,
+      "total_annotations": 1608
+    },
+    {
+      "video_name": "basket_S1T2_pre",
+      "total_frames": 162,
+      "total_annotations": 972
+    },
+    {
+      "video_name": "basket_S3T5_pre",
+      "total_frames": 238,
+      "total_annotations": 1428
+    },
+    {
+      "video_name": "basket_S3T4_pre",
+      "total_frames": 278,
+      "total_annotations": 1668
+    },
+    {
+      "video_name": "basket_S4T5_post",
+      "total_frames": 104,
+      "total_annotations": 624
+    },
+    {
+      "video_name": "basket_S4T4_post",
+      "total_frames": 236,
+      "total_annotations": 1416
+    },
+    {
+      "video_name": "basket_S2T7_pre",
+      "total_frames": 90,
+      "total_annotations": 540
+    },
+    {
+      "video_name": "basket_S1T3_pre",
+      "total_frames": 216,
+      "total_annotations": 1296
+    },
+    {
+      "video_name": "basket_S5T7_post",
+      "total_frames": 148,
+      "total_annotations": 888
+    },
+    {
+      "video_name": "basket_S5T6_post",
+      "total_frames": 118,
+      "total_annotations": 708
+    },
+    {
+      "video_name": "basket_S2T2_pre",
+      "total_frames": 128,
+      "total_annotations": 768
+    },
+    {
+      "video_name": "basket_S1T6_pre",
+      "total_frames": 142,
+      "total_annotations": 852
+    },
+    {
+      "video_name": "basket_S6T7_post",
+      "total_frames": 206,
+      "total_annotations": 1236
+    },
+    {
+      "video_name": "basket_S6T6_post",
+      "total_frames": 196,
+      "total_annotations": 1176
+    },
+    {
+      "video_name": "basket_S3T1_pre",
+      "total_frames": 62,
+      "total_annotations": 372
+    },
+    {
+      "video_name": "basket_S5T3_post",
+      "total_frames": 124,
+      "total_annotations": 744
+    },
+    {
+      "video_name": "basket_S5T2_post",
+      "total_frames": 180,
+      "total_annotations": 1080
+    },
+    {
+      "video_name": "basket_S2T3_pre",
+      "total_frames": 236,
+      "total_annotations": 1416
+    },
+    {
+      "video_name": "basket_S4T1_post",
+      "total_frames": 210,
+      "total_annotations": 1260
+    },
+    {
+      "video_name": "basket_S1T7_pre",
+      "total_frames": 106,
+      "total_annotations": 636
+    },
+    {
+      "video_name": "basket_S5T4_post",
+      "total_frames": 206,
+      "total_annotations": 1236
+    },
+    {
+      "video_name": "basket_S3T2_pre",
+      "total_frames": 262,
+      "total_annotations": 1572
+    },
+    {
+      "video_name": "basket_S5T5_post",
+      "total_frames": 150,
+      "total_annotations": 900
+    },
+    {
+      "video_name": "basket_S4T6_post",
+      "total_frames": 224,
+      "total_annotations": 1344
+    },
+    {
+      "video_name": "basket_S4T7_post",
+      "total_frames": 166,
+      "total_annotations": 996
+    },
+    {
+      "video_name": "basket_S1T5_pre",
+      "total_frames": 236,
+      "total_annotations": 1416
+    },
+    {
+      "video_name": "basket_S2T1_pre",
+      "total_frames": 30,
+      "total_annotations": 180
+    },
+    {
+      "video_name": "basket_S1T4_pre",
+      "total_frames": 142,
+      "total_annotations": 852
+    },
+    {
+      "video_name": "basket_S6T1_post",
+      "total_frames": 204,
+      "total_annotations": 1224
+    },
+    {
+      "video_name": "basket_S3T3_pre",
+      "total_frames": 202,
+      "total_annotations": 1212
+    },
+    {
+      "video_name": "IMG_0115",
+      "total_frames": 11827,
+      "total_annotations": 70963
+    },
+    {
+      "video_name": "IMG_0114",
+      "total_frames": 11530,
+      "total_annotations": 69180
+    },
+    {
+      "video_name": "IMG_0104",
+      "total_frames": 11376,
+      "total_annotations": 68176
+    },
+    {
+      "video_name": "IMG_0110",
+      "total_frames": 10706,
+      "total_annotations": 64237
+    },
+    {
+      "video_name": "IMG_0111",
+      "total_frames": 12222,
+      "total_annotations": 73331
+    },
+    {
+      "video_name": "IMG_0105",
+      "total_frames": 13228,
+      "total_annotations": 79393
+    },
+    {
+      "video_name": "IMG_0113",
+      "total_frames": 13068,
+      "total_annotations": 78364
+    },
+    {
+      "video_name": "IMG_0107",
+      "total_frames": 11921,
+      "total_annotations": 71526
+    },
+    {
+      "video_name": "IMG_0106",
+      "total_frames": 11272,
+      "total_annotations": 67483
+    },
+    {
+      "video_name": "IMG_0112",
+      "total_frames": 13269,
+      "total_annotations": 79614
+    },
+    {
+      "video_name": "IMG_0108",
+      "total_frames": 12097,
+      "total_annotations": 72582
+    },
+    {
+      "video_name": "IMG_0109",
+      "total_frames": 10759,
+      "total_annotations": 64554
+    }
+  ],
+  "train_count": 120647,
+  "val_count": 30162
+}

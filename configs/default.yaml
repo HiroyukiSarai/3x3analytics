@@ -1,0 +1,155 @@
+# 3x3バスケットボール戦術分析システム - 設定ファイル
+
+# =============================================================================
+# システム設定
+# =============================================================================
+system:
+  device: "cuda:0"  # 推論デバイス (cuda:0, cuda:1, cpu)
+  output_dir: "outputs"
+  log_level: "INFO"
+
+# =============================================================================
+# Phase 1: 物体検出設定
+# =============================================================================
+detection:
+  model_path: "yolo11n.pt"  # 検出モデル (yolo11n.pt, yolo11s.pt, yolo11m.pt)
+  conf_threshold: 0.5       # 選手検出の信頼度閾値
+  ball_conf_threshold: 0.3  # ボール検出の信頼度閾値
+  classes:
+    person: 0
+    sports_ball: 32
+
+# =============================================================================
+# Phase 1: トラッキング設定
+# =============================================================================
+tracking:
+  tracker_type: "bytetrack"  # bytetrack, botsort, deepocsort
+  reid_weights: "osnet_x0_25_msmt17.pt"  # Re-IDモデル (BoT-SORT/DeepOCSORT用)
+  max_trajectory_length: 90   # 軌跡の最大長（フレーム数）
+
+# =============================================================================
+# Phase 2: コート検出・ホモグラフィ設定
+# =============================================================================
+homography:
+  auto_detect: true           # コートキーポイントの自動検出
+  court_model_path: null      # コート検出モデル（nullの場合はライン検出）
+  save_matrix: true           # ホモグラフィ行列を保存
+
+  # 2Dコートサイズ（ピクセル）
+  court_2d:
+    width: 1500
+    height: 1100
+
+# =============================================================================
+# Phase 3: 骨格推定設定
+# =============================================================================
+pose:
+  model_path: "yolo11n-pose.pt"  # 骨格推定モデル
+  conf_threshold: 0.5
+  estimate_body_orientation: true
+
+# =============================================================================
+# Phase 3: チーム分類設定
+# =============================================================================
+team_classification:
+  method: "kmeans"  # kmeans, histogram, clip
+  n_clusters: 2
+  sample_frames: 100  # 学習用サンプル収集フレーム数
+
+# =============================================================================
+# Phase 4: 戦術パターン分析設定
+# =============================================================================
+analysis:
+  # ルート分析
+  route:
+    fps: 30.0
+    pre_score_duration: 10.0  # 得点前の分析区間（秒）
+    resample_points: 50       # リサンプリングポイント数
+    normalize_start: true     # 開始位置を正規化
+
+  # パターンクラスタリング
+  pattern:
+    n_clusters: 8             # クラスタ数（戦術パターン数）
+    method: "kmeans"          # kmeans, hdbscan
+    similarity_metric: "dtw"  # dtw, frechet, hausdorff
+
+  # アクション検出
+  action:
+    screen_min_proximity: 100  # スクリーン判定の最小距離（ピクセル）
+    screen_max_speed: 30       # スクリーナーの最大速度
+    screen_min_duration: 15    # スクリーンの最小継続フレーム数
+    pass_max_travel_time: 20   # パスの最大移動時間（フレーム）
+
+# =============================================================================
+# Phase 5: 可視化設定
+# =============================================================================
+visualization:
+  show_trajectory: true
+  trajectory_length: 30
+  
+  colors:
+    team_a: [255, 100, 50]   # BGR
+    team_b: [50, 100, 255]
+    ball: [0, 165, 255]
+    court: [34, 139, 34]
+    line: [255, 255, 255]
+
+  # 動画出力
+  video:
+    codec: "mp4v"
+    save_2d_court: true
+
+# =============================================================================
+# Phase 5: レポート設定
+# =============================================================================
+report:
+  generate_json: true
+  generate_html: true
+  generate_csv: true
+  include_heatmap: true
+
+# =============================================================================
+# 3x3バスケットボール固有設定
+# =============================================================================
+basketball_3x3:
+  # コートサイズ（実寸、メートル）
+  court:
+    width: 15.0
+    length: 11.0
+    free_throw_line: 5.8
+    three_point_distance: 6.75
+
+  # ゲームルール
+  rules:
+    players_per_team: 3
+    shot_clock: 12  # 秒
+    game_duration: 600  # 秒（10分）または21点先取
+
+  # 戦術パターン定義
+  patterns:
+    - id: "pick_and_roll"
+      name: "ピック＆ロール"
+      description: "スクリーナーがロール"
+    - id: "pick_and_pop"
+      name: "ピック＆ポップ"
+      description: "スクリーナーがポップアウト"
+    - id: "cutting"
+      name: "カッティング"
+      description: "オフボールカット"
+    - id: "isolation"
+      name: "アイソレーション"
+      description: "1対1"
+    - id: "drive_and_kick"
+      name: "ドライブ＆キックアウト"
+      description: "ドライブからキックアウト"
+    - id: "give_and_go"
+      name: "ギブ＆ゴー"
+      description: "パス後にカット"
+    - id: "hand_off"
+      name: "ハンドオフ"
+      description: "手渡しパス"
+    - id: "off_ball_screen"
+      name: "オフボールスクリーン"
+      description: "ボールなし選手へのスクリーン"
+
+

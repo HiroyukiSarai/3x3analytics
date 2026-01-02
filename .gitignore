@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Models (large files)
+models/*.pt
+models/*.pth
+models/*.onnx
+*.pt
+*.pth
+
+# Data
+data/raw/*.mp4
+data/raw/*.mov
+data/processed/
+*.mp4
+*.mov
+
+# IDE
+.cursor/
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# External repos (clone separately)
+external_repos/
