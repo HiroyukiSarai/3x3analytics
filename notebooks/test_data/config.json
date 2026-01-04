@@ -1,0 +1,28 @@
+{
+  "TEAM_ROSTERS": {
+    "JAPAN": {
+      "7": "Dewa",
+      "13": "Ryo",
+      "24": "Player 24"
+    },
+    "USA": {
+      "12": "Player 12",
+      "14": "Player 14",
+      "15": "Player 15"
+    }
+  },
+  "TEAM_COLORS": {
+    "JAPAN": "#FF0000",
+    "USA": "#0066CC"
+  },
+  "PLAYER_CLASS_IDS": [
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "NUMBER_CLASS_ID": 2,
+  "source_video_name": "3x3_basketball_analysis.mp4",
+  "num_frames": 1088
+}
